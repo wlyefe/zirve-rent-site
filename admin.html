@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+ZIRVE ADMIN
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div class="admin-login">
+
+<div class="admin-login-box">
+
+<h1>
+Admin Giriş
+</h1>
+
+<input
+type="text"
+id="adminUser"
+placeholder="Kullanıcı Adı">
+
+<input
+type="password"
+id="adminPass"
+placeholder="Şifre">
+
+<button id="loginBtn">
+Giriş Yap
+</button>
+
+</div>
+
+</div>
+
+<div class="admin-panel" id="realAdminPanel">
+
+<div class="admin-sidebar">
+
+<h2>
+ZIRVE ADMIN
+</h2>
+
+<button>
+Dashboard
+</button>
+
+<button>
+Rezervasyonlar
+</button>
+
+<button>
+Araçlar
+</button>
+
+<button>
+Kampanyalar
+</button>
+
+</div>
+
+<div class="admin-content">
+
+<div class="admin-top">
+
+<h1>
+Admin Panel
+</h1>
+
+</div>
+
+<div class="admin-stats">
+
+<div class="admin-stat">
+
+<h3>
+Toplam Araç
+</h3>
+
+<h1>
+132
+</h1>
+
+</div>
+
+<div class="admin-stat">
+
+<h3>
+Rezervasyon
+</h3>
+
+<h1>
+84
+</h1>
+
+</div>
+
+<div class="admin-stat">
+
+<h3>
+Kazanç
+</h3>
+
+<h1>
+458.000₺
+</h1>
+
+</div>
+
+</div>
+
+<div class="admin-table">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Müşteri
+</th>
+
+<th>
+Araç
+</th>
+
+<th>
+Durum
+</th>
+
+<th>
+Ücret
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+Ahmet Yılmaz
+</td>
+
+<td>
+Renault Megane
+</td>
+
+<td>
+Onaylandı
+</td>
+
+<td>
+18.500₺
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Mehmet Kaya
+</td>
+
+<td>
+Fiat Egea
+</td>
+
+<td>
+Bekliyor
+</td>
+
+<td>
+12.800₺
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+document
+.getElementById("loginBtn")
+.addEventListener(
+"click",
+()=>{
+
+const user =
+document.getElementById(
+"adminUser"
+).value;
+
+const pass =
+document.getElementById(
+"adminPass"
+).value;
+
+if(
+user==="admin" &&
+pass==="12345"
+){
+
+document.querySelector(
+".admin-login"
+).style.display =
+"none";
+
+document.getElementById(
+"realAdminPanel"
+).style.display =
+"block";
+
+}
+
+else{
+
+alert(
+"Giriş başarısız"
+);
+
+}
+
+}
+);
+
+</script>
+
+</body>
+
+</html>
